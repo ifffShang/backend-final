@@ -16,7 +16,7 @@ const port = process.env.PORT || 8000;
 // cors
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:4000'
+    origin: 'https://frontend-final-69a3.onrender.com'
 }));
 
 app.options('*', cors());
@@ -44,6 +44,9 @@ app.use("/", authRoutes)
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
+  console.log("MONGO_URI:", process.env.MONGO_URI);
+console.log("JWT_SECRET:", process.env.JWT_SECRET);
+console.log("NODE_ENV:", process.env.NODE_ENV);
   // connectMongoBD();
 })
 
