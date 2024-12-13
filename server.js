@@ -2,12 +2,12 @@ import dotenv from 'dotenv';
 dotenv.config();
 import express from "express";
 import cors from 'cors';
-import authRoutes from "./routes/authRoutes.js";
+import authRoutes from "./src/routes/authRoutes.js";
 import mongoose from "mongoose";
 import cookieParser from 'cookie-parser';
-import passport from './config/passport.js';
-import postRoutes from "./routes/post.routes.js"
-import connectMongoBD from "./db/connectMongoDB.js";
+import passport from './src/config/passport.js';
+import postRoutes from "./src/routes/post.routes.js"
+import connectMongoBD from "./src/db/connectMongoDB.js";
 
 
 
